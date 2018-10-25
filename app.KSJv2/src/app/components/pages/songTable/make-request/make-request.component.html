@@ -1,0 +1,26 @@
+<h3 mat-dialog-title>
+  <span class='ksj'>Welcome To KSJ</span>
+  <br>
+  Select Singers
+  <!-- <br>
+  {{data.partyID}} -->
+</h3>
+<mat-dialog-content >
+<!-- Add Team -->
+  <mat-form-field>
+    <input type='text' matInput placeholder="Team Name" id='teamName' [(ngModel)]='data.teamName' name='teamName'>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input type='text' matInput placeholder="Security Pin" id='teamPin' [(ngModel)]='data.teamPin' name='teamPin'>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input type='text' matInput placeholder="Singer's Name : 1" id='member1' [(ngModel)]='data.member1' name='member1'>
+  </mat-form-field>
+  <h3>{{ data.error }}</h3>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancel()">Back</button>
+  <button mat-raised-button color="accent" (click)="onCloseTeam()">Add</button>
+</mat-dialog-actions>

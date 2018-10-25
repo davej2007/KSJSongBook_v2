@@ -1,0 +1,14 @@
+.icon {
+    padding: 0 14px;
+  }
+  
+.spacer {
+    flex: 1 1 auto;
+  }
+
+  .ksj {
+    color:red;
+    font-family: algerian;
+    font-size: 250%;
+  
+  }

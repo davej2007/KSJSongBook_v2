@@ -1,0 +1,45 @@
+<mat-card class="card">
+  <mat-card-header >
+    <mat-card-title><h1 class='title'>Enter New Party Details</h1></mat-card-title>
+    <mat-card-subtitle>Please Enter The Details Of The New Party</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <p>
+      <mat-form-field>
+        <input type='text' matInput placeholder="Party's Name" id='partyName' [(ngModel)]='data.partyName' name='partyName'>
+      </mat-form-field>
+    </p>     
+    <p>
+      <mat-form-field>
+        <input type='date' matInput placeholder="Party's Date" id='partyDate' [(ngModel)]='data.partyDate' name='partyDate'>
+      </mat-form-field>
+    </p>
+      <p>
+        <mat-form-field>
+          <mat-select [(ngModel)]="data.partyType" name='partyType' placeholder="Party's Description">
+            <mat-option>None</mat-option>
+            <mat-option value="party">Party</mat-option>
+            <mat-option value="birthday">Birthday</mat-option>
+            <mat-option value="wedding">Wedding</mat-option>
+            <mat-option value="other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-checkbox [(ngModel)]="data.christmas">Show Christmas Songs</mat-checkbox>
+      </p>
+      <p>
+        <mat-form-field>
+          <input type='text' matInput placeholder="Party's Title" id='description' [(ngModel)]='data.description' name='description'>
+        </mat-form-field>
+      </p>
+      <p>
+        {{ data.error }}
+      </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent" (click)="onBack()">Back</button>
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button> 
+  </mat-card-actions>
+</mat-card>

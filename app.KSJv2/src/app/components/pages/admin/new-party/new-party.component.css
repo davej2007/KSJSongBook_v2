@@ -1,0 +1,15 @@
+.card {
+    width: 50%;
+    margin:  10px auto;
+  }
+.title {
+    color:red;
+    font-family: algerian;
+    text-align: center;
+    font-size: 150%;
+} 
+
+p {
+    margin:auto 15px;
+}
+  

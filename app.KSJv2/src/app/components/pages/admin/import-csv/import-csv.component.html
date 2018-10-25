@@ -1,0 +1,14 @@
+<button mat-raised-button color="primary" (click)='importCSV()' *ngIf='!showTable'>Import Songs.csv</button>
+<table style='width:100%;' *ngIf='showTable'>
+  <tr>
+    <th>Artist</th>
+    <th>Title</th> 
+    <th>File</th>
+  </tr>
+  <tr *ngFor="let song of importedsongs">
+    <td>{{ song.artist }}</td>
+    <td>{{ song.title }}</td> 
+    <td>{{ song.file }}</td>
+  </tr>
+</table>
+<button mat-raised-button color="accent" (click)='saveCSV()' *ngIf='showTable'>Save Songs.csv</button>

@@ -1,0 +1,23 @@
+.songTable {
+    width : 80%;
+    margin : 10px auto;
+  }
+  
+  .searchForm {
+    width : 50%;
+    margin : 15px auto;
+  }
+  
+  table {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+    
+    td, th {
+      width: 25%;
+    }

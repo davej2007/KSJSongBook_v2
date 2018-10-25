@@ -1,0 +1,45 @@
+<h3 mat-dialog-title>
+  <span  class='ksj'>Welcome To KSJ</span>
+  <br>
+  Add New Member
+  <br>
+  Team : {{ data.teamName}}
+</h3>
+<mat-dialog-content >
+  <mat-form-field *ngIf='data.member1!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 1" id='member1' [(ngModel)]='data.member1' name='member1'>
+  </mat-form-field>
+  <br>
+  <mat-form-field *ngIf='data.member2!=null || data.member1!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 2" id='member2' [(ngModel)]='data.member2' name='member2'>
+  </mat-form-field>
+  <br>
+  <mat-form-field *ngIf='data.member3!=null || data.member2!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 3" id='member3' [(ngModel)]='data.member3' name='member3'>
+  </mat-form-field>
+  <br>
+  <mat-form-field *ngIf='data.member4!=null || data.member3!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 4" id='member4' [(ngModel)]='data.member4' name='member4'>
+  </mat-form-field>
+  <br>
+  <mat-form-field *ngIf='data.member5!=null || data.member4!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 5" id='member5' [(ngModel)]='data.member5' name='member5'>
+  </mat-form-field>
+  <br>
+  <mat-form-field *ngIf='data.member6!=null || data.member5!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 6" id='member6' [(ngModel)]='data.member6' name='member6'>
+  </mat-form-field>
+  <br>
+  <mat-form-field *ngIf='data.member7!=null || data.member6!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 7" id='member7' [(ngModel)]='data.member7' name='member7'>
+  </mat-form-field>
+  <br>
+  <mat-form-field *ngIf='data.member8!=null || data.member7!=null'>
+    <input type='text' matInput placeholder="Singer's Name : 8" id='member8' [(ngModel)]='data.member8' name='member8'>
+  </mat-form-field>
+  <h3>{{ data.error }}</h3>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancel()">Back</button>
+  <button mat-raised-button color="warn" (click)="onCloseSinger()">Add</button>  
+</mat-dialog-actions>

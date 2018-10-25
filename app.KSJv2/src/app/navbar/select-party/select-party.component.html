@@ -1,0 +1,37 @@
+<h3 mat-dialog-title>
+  <span class = 'ksj'>Welcome To KSJ</span>
+  <br>  
+  <span *ngIf='!data.userLoggedIn'>Please Select A Party</span>
+</h3>
+<div *ngIf="data.logOff; else logInSection">
+  <mat-dialog-content>
+    Do You Wish To Log Off
+  </mat-dialog-content>
+</div>
+
+<ng-template #logInSection>
+  <mat-dialog-content>
+    <mat-checkbox [(ngModel)]="data.returningUser">Returning User</mat-checkbox>
+    <p *ngIf='!data.returningUser'>
+      <mat-form-field>
+        <input type='text' matInput placeholder="Event Pin" id='partyPin' [(ngModel)]='data.partyPin' name='partyPin'>
+      </mat-form-field>
+    </p>
+    <p *ngIf='data.returningUser'>
+      <mat-form-field>
+        <input type='text' matInput placeholder="Team Name" id='teamName' [(ngModel)]='data.teamName' name='teamName'>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input type='text' matInput placeholder="Security Pin" id='teamPin' [(ngModel)]='data.teamPin' name='teamPin'>
+      </mat-form-field>
+    </p> 
+    <h3>{{ data.error }}</h3>
+  </mat-dialog-content>
+</ng-template>
+
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancel()">Back</button>
+  <button mat-raised-button color="primary" (click)="onCloseLogIn()">Select</button>
+  
+</mat-dialog-actions>

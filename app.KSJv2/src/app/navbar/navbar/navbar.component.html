@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span (click)='openSelectParty()' class='ksj'>K S J</span>
+    
+    <span *ngIf='!user.loggedIn && party.loggedIn && !team.loggedIn'><mat-icon class="icon" (click)='openAddTeam()'>person</mat-icon></span>
+    <span *ngIf='!user.loggedIn && team.loggedIn'>{{ team.teamName }}</span>
+    <span *ngIf='!user.loggedIn && team.loggedIn'><mat-icon class="icon" (click)='openAddSingers()'>person_add</mat-icon></span>
+    <span class="spacer"></span>
+    <h1 routerLink="/songSearch">{{ party.description }}</h1>
+    <span><mat-icon class="icon" (click)='openLogOut()'>cancel</mat-icon></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- <h3 *ngFor='let singer of team.singers'>{{ singer}}</h3>
+<h1>User : {{ user.loggedIn }} : {{ user._id }}</h1>
+<h1>Party: {{ party.loggedIn }} : {{ party._id }}</h1>
+<h1>Team : {{ team.loggedIn }} : {{ team._id }}</h1> -->

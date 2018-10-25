@@ -1,0 +1,22 @@
+<h1>Request Manager</h1>
+<table style="width:100%">
+  <tr>
+    <th>Status</th>
+    <th>Created</th>
+    <th>Song Title</th>
+    <th>Artist</th> 
+    <th>Team</th>
+    <th>Singers</th>
+    <th>Buttons</th>
+  </tr>
+  <tr *ngFor = 'let request of allRequests;'>
+    <td>{{ request.status }}</td>
+    <td>{{ request.created }}</td>
+    <td>{{ request.song.title }}</td>
+    <td>{{ request.song.artist}}</td> 
+    <td>{{ request.team.teamName}}</td>
+    <td>{{ request.singers }}</td>
+    <td><button>press here</button></td>
+  </tr>
+  
+</table>
